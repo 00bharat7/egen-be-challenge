@@ -16,6 +16,13 @@ EGEN Weight tracker is weight tracking Application. Key features includes below 
 ````
 java -jar -Dbase.value=150 -Dapi.url=http://localhost:9000/metrics/create/150 sensor-emulator-0.0.1-SNAPSHOT.jar
 ````
+## DB Details -
+
+````
+1. Use Mongo DB
+2. Create a Database -  weighttrackerdb
+3. create 2 collections - alerts, metrics
+````
 
 NOTE : For more details about the API visit the below documentation
 
