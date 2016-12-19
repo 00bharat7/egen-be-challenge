@@ -1,0 +1,15 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+POST          /metrics/create/:baseWeight                                            com.test.weighttracker.controllers.WeightTracker.postMetrics(baseWeight: String)
+GET           /metrics/read                                                          com.test.weighttracker.controllers.WeightTracker.fetchMetrics
+GET           /metrics/readByTimeRange                                               com.test.weighttracker.controllers.WeightTracker.fetchMetricsByTimeRange(from: Option[String],to: Option[String])
+GET           /alerts/read                                                           com.test.weighttracker.controllers.WeightTracker.fetchAlerts
+GET           /alerts/readByTimeRange                                                com.test.weighttracker.controllers.WeightTracker.fetchAlertsByTimeRange(from: Option[String],to: Option[String])
